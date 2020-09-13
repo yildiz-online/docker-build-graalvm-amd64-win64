@@ -1,7 +1,13 @@
 version: 2.1
 
+orbs:
+  win: circleci/windows@2.2.0
+
 jobs:
   build:
+    executor:
+      name: win/default
+      shell: powershell.exe
     docker:
       - image: docker:17.05.0-ce-git
     steps:
