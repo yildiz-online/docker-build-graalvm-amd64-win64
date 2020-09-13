@@ -2,8 +2,6 @@ version: 2.1
 
 jobs:
   build:
-    docker:
-      - image: moussavdb/build-java-dependencies
     steps:
       - checkout
       - run:
