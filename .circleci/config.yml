@@ -8,8 +8,6 @@ jobs:
     executor:
       name: win/default
       shell: powershell.exe
-    docker:
-      - image: docker:17.05.0-ce-git
     steps:
       - checkout
       - setup_remote_docker
