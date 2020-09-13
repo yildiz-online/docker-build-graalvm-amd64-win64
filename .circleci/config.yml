@@ -2,13 +2,13 @@ version: 2.1
 
 jobs:
   build:
+    docker:
+      - image: docker:17.05.0-ce-git
     steps:
       - checkout
+      - setup_remote_docker
       - run:
           name: deploy
           command: |
             docker build -t moussavdb/build-graalvm-amd64-win64:latest -t moussavdb/build-graalvm-amd64-win64:build_$TRAVIS_BUILD_NUMBER .
-            docker login -u="moussavdb" -p="test";
-            docker push moussavdb/build-graalvm-amd64-win64:latest;
-            docker push moussavdb/build-graalvm-amd64-win64:build_$TRAVIS_BUILD_NUMBER;
             
