@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/windows:1903
 
 LABEL maintainer="Grégory Van den Borre vandenborre.gregory@hotmail.fr"
 
-ENV GRAALVM_VERSION=20.2.0
+ENV GRAALVM_VERSION=20.3.0
 ENV MAVEN_VERSION=3.6.3
 
 ENV JAVA_FILE=graalvm-ce-java11-${GRAALVM_VERSION}
